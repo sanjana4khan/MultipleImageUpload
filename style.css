@@ -1,0 +1,59 @@
+input[type="file"] {
+  width: 30%;
+  margin: auto;
+}
+.imageThumb {
+  max-height: 75px;
+  border: 2px solid;
+  padding: 1px;
+  cursor: pointer;
+}
+.pip {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+.remove {
+  display: block;
+  background: #444;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.remove:hover {
+  background: white;
+  color: black;
+}
+
+.p-3 {
+  position: relative;
+}
+
+.closeButton {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+
+.closeButton::before, .closeButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: red; /* Adjust the color */
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeButton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.p-3:hover .closeButton {
+  display: block; /* Show the close button on hover */
+}
