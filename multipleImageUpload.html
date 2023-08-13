@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+     <script src="node_modules/sortablejs/Sortable.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="script.js"></script>      
+    <script src="script.js"></script>   
+       
   </head>
   <body>
     <div class="form-group text-center mt-5">
       <label for="uploadFile" class="form-label">Upload Your Images</label>
       <input class="form-control text-center mt-3" type="file" id="uploadFile" name="uploadFile[]" multiple />
     </div>
-    <div class="preview d-flex flex-wrap justify-content-center mt-5"></div>
+    <div class="preview d-flex flex-wrap justify-content-center mt-5" id="preview"></div>
   </body>
 </html>

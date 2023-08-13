@@ -1,6 +1,7 @@
+
 $(document).ready(function () {
     const uploadField = document.querySelector('#uploadFile');
-    const preview     = document.querySelector('.preview');
+    const preview     = document.querySelector('#preview');
     uploadField.addEventListener('change', function (event) {
         if (window.File && window.FileList && window.FileReader) {
             const files = event.target.files;
@@ -29,13 +30,18 @@ $(document).ready(function () {
 
                             // Click event listener for remove button
                             removeButton.addEventListener('click', function () {
-                                newDiv.remove(); // Remove the parent element
+                                newDiv.remove(); 
                             });
 
                             preview.appendChild(newDiv);
 
                         }, reader.readAsDataURL(file))
                     }
+                })
+
+                new Sortable(preview,{
+                    animation: 150,
+                    handle: '.p-3'
                 })
             }
         }
